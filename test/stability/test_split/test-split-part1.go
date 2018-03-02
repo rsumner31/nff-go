@@ -189,6 +189,7 @@ func generatePacket(pkt *packet.Packet, context flow.UserContext) {
 	if time.Since(progStart) < T {
 		return
 	}
+
 	if count%5 == 0 {
 		udp.DstPort = packet.SwapBytesUint16(dstPort1)
 		atomic.AddUint64(&sentPacketsGroup1, 1)

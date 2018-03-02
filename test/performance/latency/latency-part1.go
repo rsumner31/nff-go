@@ -93,6 +93,9 @@ func main() {
 	flag.UintVar(&outport, "outport", 0, "port for sender")
 	flag.UintVar(&inport, "inport", 1, "port for receiver")
 
+	flag.UintVar(&outport, "outport", 0, "port for sender")
+	flag.UintVar(&inport, "inport", 1, "port for receiver")
+
 	latencies = make(chan time.Duration)
 	stop = make(chan string)
 	latenciesStorage = make([]time.Duration, 2*latNumber)
